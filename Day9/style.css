@@ -1,0 +1,127 @@
+body {
+  background-color: lightgray;
+}
+
+h2 {
+  color: green;
+  padding: 10px;
+}
+p {
+  color: green;
+}
+
+
+table {
+  border-collapse: collapse;
+  width: 60%;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+.card {
+  border: 1px solid black;
+  padding: 10px;
+  box-shadow: 2px 2px 5px gray;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+  padding: 8px;
+}
+
+.btn {
+  padding: 8px 15px;
+  color: white;
+  border: none;
+  margin-right: 5px;
+}
+
+.primary {
+  background-color: green;
+}
+
+.secondary {
+  background-color: gray;
+}
+
+.center-text {
+  text-align: center;
+}
+/* Task 21: Banner */
+#banner {
+  font-size: 32px;
+  background-color: lightblue;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+/* Task 22: Footer */
+#footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+/* Task 23: Intro paragraph */
+#intro {
+  font-style: italic;
+  padding: 15px;
+}
+
+/* Task 24: Box with fixed size */
+#box1 {
+  width: 200px;
+  height: 100px;
+  background-color: lightgreen;
+  padding: 10px;
+  margin: 15px 0;
+}
+
+/* Task 25: Styled submit button */
+#submitBtn {
+  background-color: #007bff;
+  color: white;
+  border: 2px solid #0056b3;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+/* Task 26 & 27: Universal selector applied */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background-color: #fdfdfd;
+}
+h1, h2, h3 {
+  font-family: 'Verdana', sans-serif;
+  color: #2c3e50;
+}
+
+p, li, a {
+  line-height: 1.6;
+}
+
+.btn-primary {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #95a5a6;
+  color: white;
+}
