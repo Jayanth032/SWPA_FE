@@ -1,0 +1,28 @@
+<style>
+  .positioned-box {
+    width: 100%;
+    height: 300px;
+    background-image: url('https://wallpapercave.com/wp/wp1917113.jpg'); /* Example image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top right;
+    position: relative;
+    color: white;
+    font-family: sans-serif;
+  }
+
+  .positioned-box .content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
+</style>
+
+<div class="positioned-box">
+  <div class="content">
+    Bottom Left Content
+  </div>
+</div>
