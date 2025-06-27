@@ -1,0 +1,18 @@
+<style>
+  .z-stack {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    color: white;
+    line-height: 100px;
+  }
+
+  .z1 { background: green; left: 50px; top: 50px; z-index: 1; }
+  .z2 { background: orange; left: 80px; top: 80px; z-index: 2; }
+  .z3 { background: purple; left: 110px; top: 110px; z-index: 3; }
+</style>
+
+<div class="z-stack z1">Z1</div>
+<div class="z-stack z2">Z2</div>
+<div class="z-stack z3">Z3</div>

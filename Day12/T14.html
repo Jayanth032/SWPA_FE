@@ -1,0 +1,29 @@
+<style>
+  .tooltip-wrapper {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .tooltip-text {
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: black;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 5px;
+    white-space: nowrap;
+    display: none;
+  }
+
+  .tooltip-wrapper:hover .tooltip-text {
+    display: block;
+  }
+</style>
+
+<div class="tooltip-wrapper">
+  Hover me
+  <div class="tooltip-text">Tooltip Info</div>
+</div>
