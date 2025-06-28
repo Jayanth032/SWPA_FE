@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jayanth's Resume</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    header {
+      text-align: center;
+    }
+    h2 {
+      color: darkblue;
+      margin-top: 30px;
+    }
+    ul {
+      list-style-type: square;
+      font-family: 'Courier New', monospace;
+    }
+    .columns {
+      display: flex;
+      gap: 20px;
+    }
+    .column {
+      flex: 1;
+    }
+    form input, form select, form textarea {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>******</h1>
+    <p>Web Developer & AI Enthusiast</p>
+  </header>
+
+  <section>
+    <h2>Summary</h2>
+    <p>Enthusiastic developer with experience in full-stack projects, frontend design, and AI/ML implementations. Comfortable working with HTML, CSS, Python, and deep learning frameworks.</p>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML, CSS, JavaScript</li>
+      <li>Python (Django, Streamlit)</li>
+      <li>Machine Learning & Deep Learning</li>
+      <li>Frontend Projects (Portfolio, Landing Pages)</li>
+    </ul>
+  </section>
+
+  <section class="columns">
+    <div class="column">
+      <h2>Experience</h2>
+      <p><strong>Frontend Intern</strong><br>Completed 12+ layout and styling tasks with focus on responsive design and animations.</p>
+      <p><strong>AI Projects</strong><br>Developed VAE, DCGAN, and cGAN models for image generation tasks using datasets like CelebA and Tiny ImageNet.</p>
+    </div>
+    <div class="column">
+      <h2>Education</h2>
+      <p><strong>B.Tech – Computer Science</strong><br>Focused on AI, Web Development, and Data Security.</p>
+      <p><strong>Courses</strong><br>Completed projects in Reinforcement Learning, Privacy Analyzer, and Full-Stack Web Apps.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <input type="date" required>
+      <select required>
+        <option value="">Select Reason</option>
+        <option>Internship</option>
+        <option>Collaboration</option>
+        <option>Freelance Work</option>
+      </select>
+      <textarea placeholder="Your Message" rows="4" required></textarea>
+      <input type="submit" value="Send">
+    </form>
+  </section>
+
+</body>
+</html>
