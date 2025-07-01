@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task 24 – Full Page Layout</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .grid-container {
+      grid-template-columns: 200px 1fr;
+      grid-template-rows: 60px 1fr 60px;
+      grid-template-areas:
+        "nav nav"
+        "sidebar content"
+        "footer footer";
+      height: 100vh;
+    }
+
+    .nav { grid-area: nav; background-color: #0D47A1; }
+    .sidebar { grid-area: sidebar; background-color: #1565C0; }
+    .content { grid-area: content; background-color: #1E88E5; }
+    .footer { grid-area: footer; background-color: #0D47A1; }
+  </style>
+</head>
+<body>
+
+<div class="grid-container">
+  <div class="grid-item nav">Navigation</div>
+  <div class="grid-item sidebar">Sidebar</div>
+  <div class="grid-item content">Main Content</div>
+  <div class="grid-item footer">Footer</div>
+</div>
+
+</body>
+</html>

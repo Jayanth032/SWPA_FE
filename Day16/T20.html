@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task 20 – Mixed Alignment</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .grid-container {
+      grid-template-rows: repeat(2, 150px);
+      align-items: stretch;
+      justify-items: start;
+    }
+
+    .grid-item:nth-child(1) {
+      align-self: start;
+      justify-self: start;
+    }
+
+    .grid-item:nth-child(2) {
+      align-self: end;
+      justify-self: end;
+    }
+
+    .grid-item:nth-child(3) {
+      align-self: stretch;
+      justify-self: stretch;
+    }
+  </style>
+</head>
+<body>
+
+<div class="grid-container">
+  <div class="grid-item">Start</div>
+  <div class="grid-item">End</div>
+  <div class="grid-item">Stretch</div>
+</div>
+
+</body>
+</html>

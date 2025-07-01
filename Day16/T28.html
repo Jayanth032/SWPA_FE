@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard Grid</title>
+  <style>
+    .dashboard {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "sidebar main"
+        "sidebar widgets";
+      grid-template-columns: 200px 1fr;
+      grid-template-rows: 60px 1fr 200px;
+      gap: 10px;
+      height: 100vh;
+      padding: 10px;
+    }
+
+    .header { grid-area: header; background: #2196F3; }
+    .sidebar { grid-area: sidebar; background: #03A9F4; }
+    .main { grid-area: main; background: #B3E5FC; }
+    .widgets { grid-area: widgets; background: #81D4FA; }
+
+    .dashboard > div {
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <div class="header">Header</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="main">Main Content</div>
+    <div class="widgets">Widgets</div>
+  </div>
+</body>
+</html>

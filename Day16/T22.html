@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task 22 – Assign using grid-area</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .grid-container {
+      grid-template-columns: 100px 1fr;
+      grid-template-rows: auto auto;
+      grid-template-areas:
+        "title title"
+        "nav main";
+    }
+
+    .grid-item:nth-child(1) { grid-area: title; }
+    .grid-item:nth-child(2) { grid-area: nav; }
+    .grid-item:nth-child(3) { grid-area: main; }
+  </style>
+</head>
+<body>
+
+<div class="grid-container">
+  <div class="grid-item">Header</div>
+  <div class="grid-item">Sidebar</div>
+  <div class="grid-item">Main Content</div>
+</div>
+
+</body>
+</html>

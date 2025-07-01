@@ -1,0 +1,95 @@
+/*T1-T5*/
+.grid-container {
+  display: grid;
+  padding: 20px;
+  margin: 30px;
+  background-color: #f4f4f4;
+  border: 2px dashed #aaa;
+}
+
+.grid-item {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+}
+/*T6-T10*/
+.grid-container {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  margin: 30px;
+  background-color: #f0f0f0;
+  border: 2px dashed #aaa;
+}
+
+.grid-item {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+}
+/*T11-T15*/
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
+  padding: 20px;
+  margin: 30px;
+  background-color: #f0f0f0;
+  border: 2px dashed #aaa;
+}
+
+.grid-item {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+}
+/* T16 T20*/
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(2, 100px);
+  gap: 10px;
+  padding: 20px;
+  margin: 30px;
+  background-color: #f0f0f0;
+  border: 2px dashed #aaa;
+  height: 300px; /* for align-content to show effect */
+  justify-content: start; /* default */
+  align-content: start;   /* default */
+}
+
+.grid-item {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 10px;
+}
+/*T21.T24*/
+.grid-container {
+  display: grid;
+  gap: 10px;
+  padding: 20px;
+  margin: 30px;
+  background-color: #f4f4f4;
+  border: 2px dashed #ccc;
+}
+
+.grid-item {
+  background-color: #1976D2;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  border-radius: 6px;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task 21 – grid-template-areas</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .grid-container {
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: auto auto;
+      grid-template-areas:
+        "title title"
+        "left right";
+    }
+
+    .title {
+      grid-area: title;
+    }
+
+    .left {
+      grid-area: left;
+    }
+
+    .right {
+      grid-area: right;
+    }
+  </style>
+</head>
+<body>
+
+<div class="grid-container">
+  <div class="grid-item title">Header</div>
+  <div class="grid-item left">Sidebar</div>
+  <div class="grid-item right">Main Content</div>
+</div>
+
+</body>
+</html>
