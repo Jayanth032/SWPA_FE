@@ -1,0 +1,22 @@
+<div class="loading">Loading</div>
+
+<style>
+.loading::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border: 2px solid #999;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+  animation: spin 1s linear infinite;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+</style>

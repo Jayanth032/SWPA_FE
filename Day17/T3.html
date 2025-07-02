@@ -1,0 +1,32 @@
+<div class="tooltip-container">
+  Hover me
+  <div class="tooltip-text">Tooltip info appears here</div>
+</div>
+
+<style>
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  background-color: black;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+</style>

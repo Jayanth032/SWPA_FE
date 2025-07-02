@@ -1,0 +1,24 @@
+<div class="hover-hint">Product Name</div>
+
+<style>
+.hover-hint {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.hover-hint::after {
+  content: "Hover to see more";
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  font-size: 12px;
+  color: #666;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.hover-hint:hover::after {
+  opacity: 1;
+}
+</style>

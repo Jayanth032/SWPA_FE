@@ -1,0 +1,42 @@
+<div class="product-card">
+  <span class="ribbon">Sale</span>
+  <p>Awesome Product</p>
+</div>
+
+<style>
+.product-card {
+  position: relative;
+  width: 200px;
+  padding: 20px;
+  background: #f2f2f2;
+  border: 1px solid #ccc;
+  margin: 20px;
+}
+
+.ribbon {
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  background: red;
+  color: white;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.ribbon::before,
+.ribbon::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  border: 5px solid transparent;
+  border-top-color: darkred;
+}
+
+.ribbon::before {
+  left: 0;
+}
+
+.ribbon::after {
+  right: 0;
+}
+</style>

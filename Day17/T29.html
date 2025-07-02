@@ -1,0 +1,26 @@
+<a href="#" class="animated-link">Hover Me</a>
+
+<style>
+.animated-link {
+  position: relative;
+  text-decoration: none;
+  color: #333;
+}
+
+.animated-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: #333;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.animated-link:hover::after {
+  transform: scaleX(1);
+}
+</style>

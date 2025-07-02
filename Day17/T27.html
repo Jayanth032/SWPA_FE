@@ -1,0 +1,13 @@
+<p class="star-hover">Favorite Item</p>
+
+<style>
+.star-hover::before {
+  content: "★ ";
+  color: gray;
+  transition: color 0.3s ease;
+}
+
+.star-hover:hover::before {
+  color: gold;
+}
+</style>

@@ -1,0 +1,20 @@
+<h2 class="new-heading">Product Title</h2>
+
+<style>
+.new-heading {
+  position: relative;
+  display: inline-block;
+}
+
+.new-heading::after {
+  content: "NEW";
+  position: absolute;
+  top: -10px;
+  right: -30px;
+  background: green;
+  color: white;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+</style>
