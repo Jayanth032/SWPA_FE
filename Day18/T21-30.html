@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      padding: 20px;
+    }
+    section {
+      background: #fff;
+      margin-bottom: 40px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+      margin-bottom: 15px;
+    }
+
+    .multi-anim {
+      width: 80px;
+      height: 80px;
+      background: teal;
+      animation: moveUpDown 2s infinite alternate, fade 2s infinite alternate;
+    }
+    @keyframes moveUpDown {
+      from { transform: translateY(0); }
+      to { transform: translateY(50px); }
+    }
+    @keyframes fade {
+      from { opacity: 0.5; }
+      to { opacity: 1; }
+    }
+
+    /* Task 22: Animation Delay */
+    .delayed-anim {
+      width: 80px;
+      height: 80px;
+      background: crimson;
+      animation: scaleUp 1s ease-in-out 2s forwards;
+    }
+    @keyframes scaleUp {
+      from { transform: scale(1); }
+      to { transform: scale(1.5); }
+    }
+
+    /* Task 23: Alert Box Slide + Fade */
+    .alert {
+      background: #ffdd57;
+      padding: 20px;
+      width: 300px;
+      opacity: 0;
+      position: relative;
+      top: -30px;
+      animation: slideFade 1s forwards;
+    }
+    @keyframes slideFade {
+      to {
+        top: 0;
+        opacity: 1;
+      }
+    }
+
+    /* Task 24: Marquee Effect */
+    .marquee {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .marquee-text {
+      display: inline-block;
+      animation: scroll 5s linear infinite;
+    }
+    @keyframes scroll {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    /* Task 25: Typing Effect */
+    .typing {
+      font-family: monospace;
+      font-size: 1.2rem;
+      width: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 2px solid black;
+      animation: typing 4s steps(20, end) forwards;
+    }
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 240px; }
+    }
+
+    /* Task 26: Progress Bar */
+    .progress-container {
+      width: 300px;
+      background: #eee;
+      height: 20px;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      width: 0;
+      height: 100%;
+      background: limegreen;
+      animation: fill 3s forwards;
+    }
+    @keyframes fill {
+      to { width: 100%; }
+    }
+
+    /* Task 27: Animate Background on Hover (1 time) */
+    .hover-bg {
+      width: 150px;
+      height: 50px;
+      background: #ccc;
+      text-align: center;
+      line-height: 50px;
+      cursor: pointer;
+    }
+    .hover-bg:hover {
+      animation: colorShift 1s forwards;
+    }
+    @keyframes colorShift {
+      0% { background: #ccc; }
+      100% { background: #2ecc71; }
+    }
+
+    /* Task 28: Alternate Direction */
+    .alternate-box {
+      width: 80px;
+      height: 80px;
+      background: #e67e22;
+      animation: slideLR 1.5s infinite alternate;
+    }
+    @keyframes slideLR {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(100px); }
+    }
+
+    /* Task 29: Hover to Trigger Keyframe */
+    .hover-scale {
+      width: 100px;
+      height: 100px;
+      background: salmon;
+    }
+    .hover-scale:hover {
+      animation: pop 0.5s forwards;
+    }
+    @keyframes pop {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    /* Task 30: Staggered Animation for Grid Items */
+    .grid {
+      display: flex;
+      gap: 10px;
+    }
+    .grid-item {
+      width: 60px;
+      height: 60px;
+      background: #9b59b6;
+      opacity: 0;
+      animation: fadeIn 0.5s forwards;
+    }
+    .grid-item:nth-child(1) { animation-delay: 0.2s; }
+    .grid-item:nth-child(2) { animation-delay: 0.4s; }
+    .grid-item:nth-child(3) { animation-delay: 0.6s; }
+    .grid-item:nth-child(4) { animation-delay: 0.8s; }
+    .grid-item:nth-child(5) { animation-delay: 1s; }
+
+    @keyframes fadeIn {
+      to { opacity: 1; transform: scale(1.1); }
+    }
+  </style>
+</head>
+<body>
+
+  <section>
+    <h2>Multiple Animations</h2>
+    <div class="multi-anim"></div>
+  </section>
+
+  <section>
+    <h2> Animation with Delay (2s)</h2>
+    <div class="delayed-anim"></div>
+  </section>
+
+  <section>
+    <h2> Alert Box Slide + Fade</h2>
+    <div class="alert">⚠️ Alert! This is an animated message.</div>
+  </section>
+
+  <section>
+    <h2> Marquee Effect</h2>
+    <div class="marquee">
+      <div class="marquee-text">🌟 Welcome to Advanced CSS Animations! 🌟</div>
+    </div>
+  </section>
+
+  <section>
+    <h2> Typing Effect</h2>
+    <div class="typing">Typing animations are cool!</div>
+  </section>
+
+  <section>
+    <h2> Progress Bar Animation</h2>
+    <div class="progress-container">
+      <div class="progress-fill"></div>
+    </div>
+  </section>
+
+  <section>
+    <h2> Background Animation on Hover (Once)</h2>
+    <div class="hover-bg">Hover Me</div>
+  </section>
+
+  <section>
+    <h2> Alternate Direction Slide</h2>
+    <div class="alternate-box"></div>
+  </section>
+
+  <section>
+    <h2> Hover Triggered Animation</h2>
+    <div class="hover-scale"></div>
+  </section>
+
+  <section>
+    <h2>Staggered Grid Animation</h2>
+    <div class="grid">
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+    </div>
+  </section>
+
+</body>
+</html>

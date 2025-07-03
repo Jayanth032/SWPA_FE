@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Keyframes – Tasks 11–20</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 20px;
+    }
+    section {
+      background: #fff;
+      margin-bottom: 40px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+      margin-bottom: 15px;
+    }
+
+    /* Task 11: Bouncing Ball */
+    .ball {
+      width: 50px;
+      height: 50px;
+      background: red;
+      border-radius: 50%;
+      position: relative;
+      animation: bounce 1s infinite ease-in-out;
+    }
+    @keyframes bounce {
+      0%, 100% { top: 0; }
+      50% { top: 100px; }
+    }
+
+    /* Task 12: Box left to right */
+    .move-box {
+      width: 50px;
+      height: 50px;
+      background: blue;
+      position: relative;
+      animation: moveRight 2s linear infinite;
+    }
+    @keyframes moveRight {
+      0% { left: 0; }
+      100% { left: 300px; }
+    }
+
+    /* Task 13: Pulsing circle */
+    .pulse-circle {
+      width: 60px;
+      height: 60px;
+      background: purple;
+      border-radius: 50%;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+    }
+
+    /* Task 14: Fade In */
+    .fade-in-box {
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    /* Task 15: Spinning Logo */
+    .spinner {
+      width: 60px;
+      height: 60px;
+      border: 4px solid #ccc;
+      border-top: 4px solid #3498db;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Task 16: Loader with 3 Dots */
+    .loader {
+      display: flex;
+      gap: 10px;
+    }
+    .dot {
+      width: 15px;
+      height: 15px;
+      background: black;
+      border-radius: 50%;
+      animation: blink 1.5s infinite;
+    }
+    .dot:nth-child(2) { animation-delay: 0.3s; }
+    .dot:nth-child(3) { animation-delay: 0.6s; }
+
+    @keyframes blink {
+      0%, 80%, 100% { opacity: 0.3; }
+      40% { opacity: 1; }
+    }
+
+    /* Task 17: Background Color Loop */
+    .bg-loop {
+      width: 100px;
+      height: 100px;
+      animation: colorChange 2s infinite alternate;
+    }
+    @keyframes colorChange {
+      0% { background-color: pink; }
+      100% { background-color: teal; }
+    }
+
+    /* Task 18: Slide Text from Top */
+    .slide-text {
+      position: relative;
+      top: -100px;
+      animation: slideDown 1s forwards;
+    }
+    @keyframes slideDown {
+      to { top: 0; }
+    }
+
+    /* Task 19: Shake Effect */
+    .shake-box {
+      width: 100px;
+      height: 50px;
+      background: orange;
+      animation: shake 0.5s infinite;
+    }
+    @keyframes shake {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      50% { transform: translateX(5px); }
+      75% { transform: translateX(-5px); }
+      100% { transform: translateX(0); }
+    }
+
+    /* Task 20: Card Flip */
+    .flip-container {
+      perspective: 1000px;
+      width: 150px;
+      height: 100px;
+    }
+    .flipper {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      animation: flipCard 2s infinite alternate;
+    }
+    .front, .back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    .front {
+      background: lightblue;
+    }
+    .back {
+      background: lightcoral;
+      transform: rotateY(180deg);
+    }
+    @keyframes flipCard {
+      from { transform: rotateY(0); }
+      to { transform: rotateY(180deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Keyframes</h1>
+
+  <section>
+    <h2> Bouncing Ball</h2>
+    <div class="ball"></div>
+  </section>
+
+  <section>
+    <h2> Box Move Left to Right</h2>
+    <div class="move-box"></div>
+  </section>
+
+  <section>
+    <h2> Pulsing Circle</h2>
+    <div class="pulse-circle"></div>
+  </section>
+
+  <section>
+    <h2> Fade In Effect</h2>
+    <div class="fade-in-box">I fade in!</div>
+  </section>
+
+  <section>
+    <h2> Spinning Logo</h2>
+    <div class="spinner"></div>
+  </section>
+
+  <section>
+    <h2> Loader with Three Dots</h2>
+    <div class="loader">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </section>
+
+  <section>
+    <h2> Background Color Animation</h2>
+    <div class="bg-loop"></div>
+  </section>
+
+  <section>
+    <h2> Slide Text from Top</h2>
+    <div class="slide-text">Sliding Down!</div>
+  </section>
+
+  <section>
+    <h2> Shake Animation</h2>
+    <div class="shake-box">Shake Me</div>
+  </section>
+
+  <section>
+    <h2>Card Flip Animation</h2>
+    <div class="flip-container">
+      <div class="flipper">
+        <div class="front">Front</div>
+        <div class="back">Back</div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
