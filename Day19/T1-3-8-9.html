@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Text Units Group</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+    }
+
+    /* Task 1: Font-size em inside px */
+    .container {
+      font-size: 20px;
+    }
+
+    .container p {
+      font-size: 1.5em;
+      line-height: 1.5em; /* Task 8 */
+    }
+
+    /* Task 3: Viewport width heading */
+    h1 {
+      font-size: 5vw;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    /* Task 9: Button padding in em */
+    .btn {
+      font-size: 1rem;
+      padding: 1em 2em;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>5vw Heading</h1>
+
+  <div class="container">
+    <p>This paragraph is 1.5em inside a 20px container, resulting in 30px font size.</p>
+    <button class="btn">Scalable Button</button>
+  </div>
+
+</body>
+</html>

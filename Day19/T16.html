@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Max Width</title>
+  <style>
+    img {
+      width: 100%;
+      height: auto;
+      max-width: 800px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      img {
+        max-width: 500px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      img {
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <img src="https://th.bing.com/th?id=ORMS.798cd06cae56c1546a33f765ae0ec3eb&pid=Wdp&w=612&h=304&qlt=90&c=1&rs=1&dpr=1&p=0" alt="Responsive Image">
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Light/Dark Theme Toggle</title>
+  <style>
+    :root {
+      --background: white;
+      --text-color: black;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --background: #121212;
+        --text-color: #f0f0f0;
+      }
+    }
+
+    body {
+      background-color: var(--background);
+      color: var(--text-color);
+      padding: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <p>This theme changes based on your system's light/dark mode setting.</p>
+
+</body>
+</html>

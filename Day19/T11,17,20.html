@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Columns + Flex Direction</title>
+  <style>
+    .container {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      padding: 40px;
+      background: #f0f0f0;
+    }
+
+    .column {
+      flex: 1;
+      background: #e0e0e0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    @media (max-width: 992px) {
+      .container {
+        flex-direction: column; /* Task 20 */
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px; /* Task 17 */
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        flex-direction: column; /* Task 11 */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="column">Column 1</div>
+    <div class="column">Column 2</div>
+  </div>
+
+</body>
+</html>

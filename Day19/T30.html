@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Font Scale Responsive</title>
+  <style>
+    :root {
+      --font-scale: 1rem;
+    }
+
+    body {
+      font-size: var(--font-scale);
+      padding: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      :root {
+        --font-scale: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <p>This font scales with the <code>--font-scale</code> variable depending on screen size.</p>
+
+</body>
+</html>

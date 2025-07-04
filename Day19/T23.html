@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Button with CSS Variables</title>
+  <style>
+    :root {
+      --btn-padding: 1rem 2rem;
+      --btn-radius: 8px;
+      --btn-color: #e91e63;
+    }
+
+    .btn {
+      padding: var(--btn-padding);
+      border-radius: var(--btn-radius);
+      background-color: var(--btn-color);
+      color: white;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="btn">Click Me</button>
+
+</body>
+</html>

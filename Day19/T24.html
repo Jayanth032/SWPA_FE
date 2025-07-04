@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Section Spacing with Variables</title>
+  <style>
+    :root {
+      --section-spacing: 3rem;
+    }
+
+    section {
+      padding: var(--section-spacing);
+      background-color: #f0f0f0;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <section>Section 1 with spacing</section>
+  <section>Section 2 with spacing</section>
+
+</body>
+</html>

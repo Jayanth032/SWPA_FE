@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Global CSS Variables</title>
+  <style>
+    :root {
+      --primary-color: #3498db;
+      --font-size-base: 16px;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      font-size: var(--font-size-base);
+      color: var(--primary-color);
+      padding: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <p>This text uses <code>--primary-color</code> and <code>--font-size-base</code>.</p>
+
+</body>
+</html>

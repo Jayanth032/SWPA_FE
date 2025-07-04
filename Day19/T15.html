@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Background Color Breakpoints</title>
+  <style>
+    .section {
+      padding: 2rem;
+      text-align: center;
+      font-size: 1.5rem;
+      background-color: #eee;
+    }
+
+    @media (max-width: 480px) {
+      .section {
+        background-color: #ffcccc;
+      }
+    }
+
+    @media (min-width: 481px) and (max-width: 768px) {
+      .section {
+        background-color: #ccffcc;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .section {
+        background-color: #ccccff;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="section">
+    Background color changes based on screen width.
+  </div>
+
+</body>
+</html>
