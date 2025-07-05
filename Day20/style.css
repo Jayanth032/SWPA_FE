@@ -1,0 +1,145 @@
+:root {
+  --primary-color: #5eaaa8;
+  --accent-color: #a3d2ca;
+  --font-size-base: 1em;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --text-color: #333;
+  --bg-color: #fdfdfd;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: var(--font-size-base);
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--text-color);
+  background: var(--bg-color);
+  line-height: 1.6;
+  padding-bottom: 4vh;
+}
+
+header {
+  background: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 2vh 0;
+  box-shadow: var(--shadow);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 2vw;
+  padding: 2vh 5vw;
+}
+
+.sidebar {
+  background: white;
+  padding: 1em;
+  height: fit-content;
+  box-shadow: var(--shadow);
+}
+
+.sidebar h2 {
+  margin-bottom: 1em;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin-bottom: 0.8em;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+  color: var(--accent-color);
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2vw;
+}
+
+.card {
+  background: white;
+  padding: 1.5em;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+  color: var(--primary-color);
+}
+
+.card .date {
+  font-size: 0.9em;
+  color: #777;
+  margin-bottom: 1em;
+}
+
+.card .excerpt::before {
+  content: "💬 ";
+  font-size: 1.1em;
+  margin-right: 0.3em;
+}
+
+.card .excerpt::first-line {
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2vh;
+  font-size: 0.9em;
+  color: #666;
+  background: #f0f0f0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    margin-bottom: 2em;
+  }
+
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  header h1 {
+    font-size: 1.5em;
+  }
+}
