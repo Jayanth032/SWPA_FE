@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Animated Portfolio Cards</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>My Portfolio</h1>
+    <button id="toggle-theme">Toggle Theme</button>
+  </header>
+
+  <main class="card-container">
+    <div class="card project1">
+      <div class="card-inner">
+        <div class="card-front">
+          <h2>Weather App</h2>
+          <p class="intro">Real-time weather updates with OpenWeather API.</p>
+        </div>
+        <div class="card-back">
+          <p>Tech: HTML, CSS, JS, API</p>
+          <p>Role: Frontend Developer</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card project2">
+      <div class="card-inner">
+        <div class="card-front">
+          <h2>Blog CMS</h2>
+          <p class="intro">Create and manage blogs with markdown support.</p>
+        </div>
+        <div class="card-back">
+          <p>Tech: Node.js, MongoDB, EJS</p>
+          <p>Role: Full-stack Developer</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card project3">
+      <div class="card-inner">
+        <div class="card-front">
+          <h2>Expense Tracker</h2>
+          <p class="intro">Track your spending with visual charts.</p>
+        </div>
+        <div class="card-back">
+          <p>Tech: React, Chart.js</p>
+          <p>Role: React Developer</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card project4">
+      <div class="card-inner">
+        <div class="card-front">
+          <h2>Chat App</h2>
+          <p class="intro">Real-time chat with WebSockets.</p>
+        </div>
+        <div class="card-back">
+          <p>Tech: Socket.io, Express, Node.js</p>
+          <p>Role: Backend Developer</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const toggleBtn = document.getElementById("toggle-theme");
+    toggleBtn.onclick = () => {
+      document.body.classList.toggle("dark-mode");
+    };
+  </script>
+</body>
+</html>
