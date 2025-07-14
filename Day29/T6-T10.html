@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tasks 6 to 10</title>
+  <style>
+    #container {
+      padding: 10px;
+      margin: 10px;
+    }
+    .card {
+      background-color: lightgray;
+      padding: 10px;
+    }
+    .highlight {
+      border: 2px dashed red;
+    }
+  </style>
+</head>
+<body>
+
+  <p id="hideMe">This text will be hidden</p>      
+  <div id="container">I need a border</div>        
+  <input type="text" id="username" />               
+  <div id="card" class="card">Card Element</div>    
+
+  <script>
+    document.getElementById('hideMe').style.display = 'none';
+
+    document.getElementById('container').style.border = "2px solid black";
+
+    document.getElementById('username').value = "Guest";
+
+    document.getElementById('card').classList.add('highlight');
+
+    document.getElementById('card').classList.remove('card');
+  </script>
+
+</body>
+</html>

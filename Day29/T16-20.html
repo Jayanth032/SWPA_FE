@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tasks 16 to 20</title>
+  <style>
+    .box, .item, .highlight, .menu-item, .note {
+      margin: 5px;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Task 16 -->
+  <div class="box">Box 1</div>
+  <div class="box">Box 2</div>
+
+  <!-- Task 17 -->
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+
+  <!-- Task 18 -->
+  <p class="highlight">Highlight me</p>
+  <p class="highlight">And me too</p>
+
+  <!-- Task 19 -->
+  <div class="menu-item">Menu A</div>
+  <div class="menu-item">Menu B</div>
+
+  <!-- Task 20 -->
+  <p class="note">Note one</p>
+  <p class="note">Note two</p>
+  <script>
+    // 16. 
+    const boxes = document.getElementsByClassName('box');
+    console.log("Task 16 - Boxes:", boxes);
+    // 17.
+    const items = document.getElementsByClassName('item');
+    for (let i = 0; i < items.length; i++) {
+      items[i].style.backgroundColor = 'lightgray';
+    }
+    // 18. 
+    const highlights = document.getElementsByClassName('highlight');
+    for (let i = 0; i < highlights.length; i++) {
+      highlights[i].style.color = 'orange';
+    }
+    // 19. 
+    const menuItems = document.getElementsByClassName('menu-item');
+    for (let i = 0; i < menuItems.length; i++) {
+      menuItems[i].classList.add('active');
+    }
+    // 20
+    const notes = document.getElementsByClassName('note');
+    for (let i = 0; i < notes.length; i++) {
+      notes[i].style.fontStyle = 'italic';
+    }
+  </script>

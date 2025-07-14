@@ -1,0 +1,79 @@
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tasks 21 to 25</title>
+  <style>
+    .task, .popup, .error, .box {
+      margin: 5px;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+    .highlight-box {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Task 21 -->
+  <p class="task">Task A</p>
+  <p class="task">Task B</p>
+
+  <!-- Task 22 -->
+  <div class="popup">Popup 1</div>
+  <div class="popup">Popup 2</div>
+
+  <!-- Task 23 -->
+  <p class="error">Wrong name</p>
+  <p class="error">Invalid entry</p>
+
+  <!-- Task 24 -->
+  <div class="box">Box 1</div>
+  <div class="box">Box 2</div>
+  <button id="highlightBtn">Highlight Boxes</button>
+
+  <!-- Task 25 -->
+  <div class="faq-item">FAQ 1</div>
+  <div class="faq-item">FAQ 2</div>
+  <button onclick="toggleFAQs()">Toggle FAQs</button>
+
+  <script>
+    // 21. 
+    const tasks = document.getElementsByClassName('task');
+    for (let i = 0; i < tasks.length; i++) {
+      tasks[i].textContent += " - updated";
+    }
+
+    // 22. 
+    const popups = document.getElementsByClassName('popup');
+    for (let i = 0; i < popups.length; i++) {
+      popups[i].style.display = 'none';
+    }
+
+    // 23. 
+    const errors = document.getElementsByClassName('error');
+    for (let i = 0; i < errors.length; i++) {
+      errors[i].textContent = "Correct it";
+    }
+
+    // 24. 
+    document.getElementById('highlightBtn').addEventListener('click', function() {
+      const boxes = document.getElementsByClassName('box');
+      for (let i = 0; i < boxes.length; i++) {
+        boxes[i].classList.add('highlight-box');
+      }
+    });
+    //25
+    function toggleFAQs() {
+      const faqs = document.getElementsByClassName('faq-item');
+      for (let i = 0; i < faqs.length; i++) {
+        faqs[i].classList.toggle('show');
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tasks 11 to 15</title>
+  <style>
+    .active {
+      background-color: yellow;
+    }
+
+    #targetBox {
+      width: 100px;
+      height: 100px;
+      background-color: lightgray;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="toggleBtn">Toggle Highlight</button>
+
+  <p id="para1">Click below to change my color</p>
+  <button onclick="changeColor()">Change Color</button>
+
+  <form id="myForm">
+    <button type="submit">Submit Form</button>
+  </form>
+  <div id="status">Waiting for submission...</div>
+
+  <div id="greeting">Hello, welcome back!</div>
+
+  <button onclick="updateBoxStyle()">Style the Box</button>
+  <div id="targetBox"></div>
+
+  <script>
+    document.getElementById('toggleBtn').addEventListener('click', function() {
+      this.classList.toggle('active');
+    });
+    function changeColor() {
+      document.getElementById('para1').style.color = "green";
+    }
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+      event.preventDefault(); 
+      document.getElementById('status').innerText = "Form Submitted!";
+    });
+    alert(document.getElementById('greeting').textContent);
+
+    function updateBoxStyle() {
+      const box = document.getElementById('targetBox');
+      box.style.backgroundColor = "orange";
+      box.style.border = "2px solid black";
+      box.style.borderRadius = "8px";
+    }
+  </script>
+
+</body>
+</html>

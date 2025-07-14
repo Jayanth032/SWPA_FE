@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tasks 26 to 30</title>
+  <style>
+    .comment, .emoji-target, .card, .highlight {
+      margin: 5px;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Task 26 -->
+  <div class="info">Old info 1</div>
+  <div class="info">Old info 2</div>
+
+  <!-- Task 27 -->
+  <p class="comment">This is a comment</p>
+  <p class="comment">Another comment</p>
+  <p id="commentCount"></p>
+
+  <!-- Task 28 -->
+  <p class="emoji-target">Hello</p>
+  <p class="emoji-target">Nice work</p>
+
+  <!-- Task 29 -->
+  <div class="card">First card</div>
+  <div class="card">Second card</div>
+
+  <!-- Task 30 -->
+  <p class="highlight">Highlight this</p>
+  <p class="highlight">And this too</p>
+  <button onclick="highlightAll()">Highlight All</button>
+
+  <script>
+    const infos = document.getElementsByClassName('info');
+    for (let i = 0; i < infos.length; i++) {
+      infos[i].textContent = "Updated Info";
+    }
+    const comments = document.getElementsByClassName('comment');
+    document.getElementById('commentCount').textContent = "Number of comments: " + comments.length;
+
+    const emojiTargets = document.getElementsByClassName('emoji-target');
+    for (let i = 0; i < emojiTargets.length; i++) {
+      emojiTargets[i].textContent += " 😊";
+    }
+    const firstCard = document.getElementsByClassName('card')[0];
+    firstCard.style.backgroundColor = "lightblue";
+
+    function highlightAll() {
+      const highlights = document.getElementsByClassName('highlight');
+      for (let i = 0; i < highlights.length; i++) {
+        highlights[i].style.backgroundColor = "yellow";
+      }
+    }
+  </script>
+
+</body>
+</html>

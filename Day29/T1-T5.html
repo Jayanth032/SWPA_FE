@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tasks 1 to 5</title>
+  <style>
+    #box {
+      padding: 10px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="title">Original Title</h1> 
+  <h2 id="heading">Old Heading</h2> 
+  <div id="box">Color Box</div>      
+  <div id="message"></div>           
+  <p id="mainText">Small text</p>    
+
+  <script>
+    // 1. 
+    const title = document.getElementById('title');
+    console.log("Task 1 - Title Element:", title);
+    // 2. 
+    document.getElementById('heading').textContent = "Hello DOM!";
+    // 3.
+    document.getElementById('box').style.backgroundColor = "blue";
+    // 4. 
+    document.getElementById('message').innerHTML = "<strong>Bold</strong> text";
+    // 5. 
+    document.getElementById('mainText').style.fontSize = "24px";
+  </script>
+
+</body>
+</html>
