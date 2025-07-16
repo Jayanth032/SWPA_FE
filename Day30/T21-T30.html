@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>querySelectorAll Tasks (21–30)</title>
+  <style>
+    .hovered {
+      background-color: lightgray;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Task 21 -->
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+
+  <!-- Task 22 -->
+  <div class="menu-item">Menu 1</div>
+  <div class="menu-item">Menu 2</div>
+
+  <!-- Task 23 -->
+  <a href="#">Link One</a>
+  <a href="#">Link Two</a>
+
+  <!-- Task 24 -->
+  <div class="link">Clickable 1</div>
+  <div class="link">Clickable 2</div>
+
+  <!-- Task 25 -->
+  <input type="text" value="Clear me">
+  <input type="text" value="Clear me too">
+
+  <!-- Task 26 -->
+  <div class="notification">New Notification</div>
+  <div class="notification">Another Notification</div>
+
+  <!-- Task 27 -->
+  <div class="card">Card 1</div>
+  <div class="card">Card 2</div>
+  <div class="card">Card 3</div>
+
+  <!-- Task 28 -->
+  <div class="error">Something went wrong.</div>
+  <div class="error">Another error occurred.</div>
+
+  <!-- Task 29 -->
+  <div class="emoji">Smile</div>
+  <div class="emoji">Party</div>
+
+  <!-- Task 30 -->
+  <table border="0">
+    <tr><td>Cell 1</td><td>Cell 2</td></tr>
+    <tr><td>Cell 3</td><td>Cell 4</td></tr>
+  </table>
+
+  <script>
+    // Task 21: Select all .item elements and log NodeList
+    const items = document.querySelectorAll('.item');
+    console.log('Items:', items);
+
+    // Task 22: Change font color of all .menu-item elements
+    const menuItems = document.querySelectorAll('.menu-item');
+    menuItems.forEach(item => {
+      item.style.color = 'blue';
+    });
+
+    // Task 23: Underline all <a> tags
+    const links = document.querySelectorAll('a');
+    links.forEach(link => {
+      link.style.textDecoration = 'underline';
+    });
+
+    // Task 24: Add .hovered class to all .link elements
+    const linkElements = document.querySelectorAll('.link');
+    linkElements.forEach(link => {
+      link.classList.add('hovered');
+    });
+
+    // Task 25: Clear all <input> field values
+    const inputs = document.querySelectorAll('input');
+    inputs.forEach(input => {
+      input.value = '';
+    });
+
+    // Task 26: Set background of all .notification to pink
+    const notifications = document.querySelectorAll('.notification');
+    notifications.forEach(note => {
+      note.style.backgroundColor = 'pink';
+    });
+
+    // Task 27: Count .card elements and log the count
+    const cards = document.querySelectorAll('.card');
+    console.log('Number of .card elements:', cards.length);
+
+    // Task 28: Change all .error text to "Fixed"
+    const errors = document.querySelectorAll('.error');
+    errors.forEach(err => {
+      err.textContent = 'Fixed';
+    });
+
+    // Task 29: Add emoji to all .emoji elements
+    const emojis = document.querySelectorAll('.emoji');
+    emojis.forEach(el => {
+      el.innerHTML += ' 😊';
+    });
+
+    // Task 30: Set border for all <td> elements
+    const tdCells = document.querySelectorAll('td');
+    tdCells.forEach(td => {
+      td.style.border = '1px solid gray';
+    });
+  </script>
+
+</body>
+</html>

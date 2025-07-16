@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Tag Tasks</title>
+  <style>
+    .rounded {
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Main Heading</h1>
+  <h2>Subheading 1</h2>
+  <h2>Subheading 2</h2>
+  <p>Paragraph One</p>
+  <p>Paragraph Two</p>
+
+  <ul>
+    <li>List Item 1</li>
+    <li>List Item 2</li>
+    <li>List Item 3</li>
+  </ul>
+
+  <div>Div 1</div>
+  <div>Div 2</div>
+  <div>Div 3</div>
+
+  <img src="https://via.placeholder.com/300" alt="Sample Image">
+  <img src="https://via.placeholder.com/400" alt="Another Image">
+
+  <section>This is a section.</section>
+  <section>Another section.</section>
+
+  <table>
+    <tr><td>Row 1</td></tr>
+    <tr><td>Row 2</td></tr>
+  </table>
+
+  <button>Click Me</button>
+  <button>Another Button</button>
+
+  <footer>This is the footer</footer>
+
+  <script>
+    // Task 1: Log all <p> tags
+    const paragraphs = document.getElementsByTagName('p');
+    console.log('Paragraphs:', paragraphs);
+
+    // Task 2: Log <li> text content
+    const listItems = document.getElementsByTagName('li');
+    for (let li of listItems) {
+      console.log('List item:', li.textContent);
+    }
+
+    // Task 3: Change <h2> color to purple
+    const h2Tags = document.getElementsByTagName('h2');
+    for (let h2 of h2Tags) {
+      h2.style.color = 'purple';
+    }
+
+    // Task 4: Count <div> tags
+    const divs = document.getElementsByTagName('div');
+    console.log('Number of <div> tags:', divs.length);
+
+    // Task 5: Set <img> width to 200px
+    const images = document.getElementsByTagName('img');
+    for (let img of images) {
+      img.style.width = '200px';
+    }
+
+    // Task 6: Red border to <section>
+    const sections = document.getElementsByTagName('section');
+    for (let section of sections) {
+      section.style.border = '2px solid red';
+    }
+
+    // Task 7: Set <h1> font size to 32px
+    const h1Tags = document.getElementsByTagName('h1');
+    for (let h1 of h1Tags) {
+      h1.style.fontSize = '32px';
+    }
+
+    // Task 8: Set <table> background to lightyellow
+    const tables = document.getElementsByTagName('table');
+    for (let table of tables) {
+      table.style.backgroundColor = 'lightyellow';
+    }
+
+    // Task 9: Add 'rounded' class to <button>
+    const buttons = document.getElementsByTagName('button');
+    for (let btn of buttons) {
+      btn.classList.add('rounded');
+    }
+
+    // Task 10: Hide <footer>
+    const footers = document.getElementsByTagName('footer');
+    for (let footer of footers) {
+      footer.style.display = 'none';
+    }
+  </script>
+</body>
+</html>

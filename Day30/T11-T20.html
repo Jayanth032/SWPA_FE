@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>querySelector Tasks (11–20)</title>
+  <style>
+    .rounded {
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Task 11 -->
+  <h1>Original Heading</h1>
+
+  <!-- Task 12 -->
+  <p class="highlight">This is highlighted text.</p>
+
+  <!-- Task 13 -->
+  <div id="main">This is the main section</div>
+
+  <!-- Task 14 -->
+  <input type="text">
+
+  <!-- Task 15 & 16 -->
+  <div class="card">
+    <p>This is a paragraph inside a card.</p>
+    <div class="title">Card Title</div>
+  </div>
+
+  <!-- Task 17 -->
+  <button class="btn">Original Button</button>
+
+  <!-- Task 18 -->
+  <label for="input">Enter Name:</label>
+
+  <!-- Task 19 -->
+  <ul class="nav">
+    <li>Home</li>
+    <li>About</li>
+  </ul>
+
+  <!-- Task 20 -->
+  <section>
+    <img src="https://via.placeholder.com/150" alt="Old Section Image">
+  </section>
+
+  <script>
+    // Task 11: Change text of first <h1>
+    const h1 = document.querySelector('h1');
+    if (h1) h1.textContent = 'Updated Heading';
+
+    // Task 12: Make .highlight text bold
+    const highlight = document.querySelector('.highlight');
+    if (highlight) highlight.style.fontWeight = 'bold';
+
+    // Task 13: Set background of #main to lightblue
+    const main = document.querySelector('#main');
+    if (main) main.style.backgroundColor = 'lightblue';
+
+    // Task 14: Set value of first input to "Hello"
+    const input = document.querySelector('input');
+    if (input) input.value = 'Hello';
+
+    // Task 15: Underline <p> inside .card
+    const cardPara = document.querySelector('.card p');
+    if (cardPara) cardPara.style.textDecoration = 'underline';
+
+    // Task 16: Change font of .card .title
+    const cardTitle = document.querySelector('.card .title');
+    if (cardTitle) cardTitle.style.fontFamily = 'Courier New, monospace';
+
+    // Task 17: Change text of first .btn button
+    const btn = document.querySelector('.btn');
+    if (btn) btn.textContent = 'Clicked';
+
+    // Task 18: Change <label> text color to green
+    const label = document.querySelector('label');
+    if (label) label.style.color = 'green';
+
+    // Task 19: Log text of first .nav > li
+    const navLi = document.querySelector('.nav > li');
+    if (navLi) console.log('Nav > li text:', navLi.textContent);
+
+    // Task 20: Change image inside <section>
+    const imgInSection = document.querySelector('section img');
+    if (imgInSection) imgInSection.src = "https://www.bing.com/th?id=OADD2.7834089552469_1B2VFGXI9JUUTSO1YU&pid=21.2&c=17&roil=0&roit=0.0009&roir=1&roib=1&w=300&h=157&dynsize=1&qlt=90&dpr=2.00";
+  </script>
+
+</body>
+</html>
