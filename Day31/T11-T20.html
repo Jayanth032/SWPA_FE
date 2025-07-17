@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>textContent Tasks</title>
+  <style>
+    .note {
+      margin: 5px 0;
+    }
+    #charCount {
+      font-weight: bold;
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Task 11 -->
+  <p id="para">This is a paragraph.</p>
+
+  <!-- Task 12 -->
+  <h1 id="heading">Original Heading</h1>
+
+  <!-- Task 13 -->
+  <span class="score">0</span>
+
+  <!-- Task 14 -->
+  <textarea id="textInput" rows="3" cols="30" placeholder="Type something..."></textarea>
+  <p>Characters typed: <span id="charCount">0</span></p>
+
+  <!-- Task 15 -->
+  <div id="htmlContainer"><strong>Bold text</strong> and <em>italic text</em></div>
+
+  <!-- Task 16 -->
+  <div id="rawHTML"></div>
+
+  <!-- Task 17 -->
+  <div class="note">Meeting at 3 PM</div>
+  <div class="note">Submit your report</div>
+
+  <!-- Task 18 -->
+  <p id="greeting"></p>
+
+  <!-- Task 19 -->
+  <pre id="objectOutput"></pre>
+
+  <!-- Task 20 -->
+  <div id="multiContent">
+    <p>First line</p>
+    <p>Second line</p>
+    <span>And some span text</span>
+  </div>
+
+  <script>
+    // Task 11: Log paragraph textContent
+    const para = document.getElementById('para');
+    console.log('Paragraph textContent:', para.textContent);
+
+    // Task 12: Set heading textContent
+    document.getElementById('heading').textContent = 'Hello, User!';
+
+    // Task 13: Update span.score with a score
+    const score = 42;
+    document.querySelector('.score').textContent = score;
+
+    // Task 14: Live character counter
+    const input = document.getElementById('textInput');
+    const counter = document.getElementById('charCount');
+    input.addEventListener('input', () => {
+      counter.textContent = input.value.length;
+    });
+
+    // Task 15
+    const htmlContainer = document.getElementById('htmlContainer');
+    htmlContainer.textContent = htmlContainer.textContent;
+
+    // Task 16
+    const rawHTML = document.getElementById('rawHTML');
+    rawHTML.textContent = '<h1>Heading</h1>';
+
+    // Task 17
+    const notes = document.querySelectorAll('.note');
+    notes.forEach(note => {
+      note.textContent = 'NOTE: ' + note.textContent;
+    });
+
+    // Task 18
+    const name = 'Jayanth';
+    const greeting = document.getElementById('greeting');
+    greeting.textContent = `Good morning, ${name}`;
+
+    // Task 19: 
+    const user = { name: 'Jay', age: 21 };
+    document.getElementById('objectOutput').textContent = JSON.stringify(user, null, 2);
+
+    // Task 20: 
+    const multi = document.getElementById('multiContent');
+    console.log('Multi-content div:', multi.textContent);
+  </script>
+
+</body>
+</html>

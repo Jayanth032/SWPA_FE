@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>innerText Tasks</title>
+  <style>
+    .hidden {
+      display: none;
+    }
+    .error-msg {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Task 21 -->
+  <h1 id="headingWithHidden">Hello <span class="hidden">Secret</span> World</h1>
+
+  <!-- Task 22 -->
+  <button id="myButton">Original Text</button>
+
+  <!-- Task 23 -->
+  <div id="lineBreakText"></div>
+
+  <!-- Task 24 -->
+  <input type="text" id="userInputBox" placeholder="Enter something">
+  <button onclick="setUserInput()">Set Text</button>
+  <div id="userText"></div>
+
+  <!-- Task 25 -->
+  <div id="timestampText"></div>
+
+  <!-- Task 26 -->
+  <div id="clockText"></div>
+
+  <!-- Task 27 -->
+  <h2 id="statusHeading">Content Loaded</h2>
+  <button onclick="showLoading()">Reload Content</button>
+
+  <!-- Task 28 -->
+  <div class="error-msg">Old error</div>
+  <div class="error-msg">Something went wrong</div>
+
+  <!-- Task 29 -->
+  <div id="compareElement"><strong>Bold text</strong></div>
+
+  <!-- Task 30 -->
+  <div id="multiLineText"></div>
+  <button onclick="appendLine()">Add Line</button>
+
+  <script>
+    // Task 21: Log innerText vs textContent
+    const heading = document.getElementById('headingWithHidden');
+    console.log("innerText:", heading.innerText);     // Ignores hidden
+    console.log("textContent:", heading.textContent); // Includes all
+
+    // Task 22: Change visible button text
+    document.getElementById('myButton').innerText = "Click Me Now";
+
+    // Task 23: Add line breaks manually using \n
+    document.getElementById('lineBreakText').innerText = "Line 1\nLine 2\nLine 3";
+
+    // Task 24: Set innerText from user input
+    function setUserInput() {
+      const input = document.getElementById('userInputBox').value;
+      document.getElementById('userText').innerText = input;
+    }
+
+    // Task 25: Display timestamped text
+    const now = new Date().toLocaleTimeString();
+    document.getElementById('timestampText').innerText = `Updated at ${now}`;
+
+    // Task 26: Live clock using innerText
+    setInterval(() => {
+      const time = new Date().toLocaleTimeString();
+      document.getElementById('clockText').innerText = `Current time: ${time}`;
+    }, 1000);
+
+    // Task 27: Show "Loading..." temporarily
+    function showLoading() {
+      const status = document.getElementById('statusHeading');
+      status.innerText = 'Loading...';
+      setTimeout(() => {
+        status.innerText = 'Content Loaded';
+      }, 2000);
+    }
+
+    // Task 28: Overwrite error messages
+    document.querySelectorAll('.error-msg').forEach(err => {
+      err.innerText = 'Error fixed.';
+    });
+
+    // Task 29: Compare innerText vs innerHTML
+    const compareEl = document.getElementById('compareElement');
+    console.log("innerText:", compareEl.innerText);   // Only visible text
+    console.log("innerHTML:", compareEl.innerHTML);   // Includes tags
+
+    // Task 30: Append lines using innerText +=
+    function appendLine() {
+      const box = document.getElementById('multiLineText');
+      box.innerText += `New line at ${new Date().toLocaleTimeString()}\n`;
+    }
+  </script>
+
+</body>
+</html>

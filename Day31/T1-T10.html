@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>innerHTML Tasks</title>
+  <style>
+    .card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 8px;
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Task 1 -->
+  <div id="info"></div>
+
+  <!-- Task 2 -->
+  <p id="description">Original description</p>
+
+  <!-- Task 3 -->
+  <div id="imageContainer"></div>
+
+  <!-- Task 4 -->
+  <div id="listContainer"></div>
+
+  <!-- Task 5 -->
+  <div id="main">This is the main section.</div>
+
+  <!-- Task 6 -->
+  <div id="cardContainer"></div>
+
+  <!-- Task 7 -->
+  <div id="tableContainer"></div>
+
+  <!-- Task 8 -->
+  <div id="clearMe">Some content to clear</div>
+
+  <!-- Task 9 -->
+  <section id="sectionBtn"></section>
+
+  <!-- Task 10 -->
+  <span id="status">Old Status</span>
+
+  <script>
+    // Task 1: Set innerHTML to "Welcome <strong>Guest</strong>"
+    document.getElementById('info').innerHTML = 'Welcome <strong>Guest</strong>';
+
+    // Task 2: Replace content of <p id="description">
+    document.getElementById('description').innerHTML = '<p>This is a new <em>HTML</em> paragraph with innerHTML.</p>';
+
+    // Task 3: Add image inside div
+    document.getElementById('imageContainer').innerHTML = '<img src="https://via.placeholder.com/150" alt="Sample Image">';
+
+    // Task 4: Insert list using innerHTML
+    document.getElementById('listContainer').innerHTML = '<ul><li>Item 1</li><li>Item 2</li><li>Item 3</li></ul>';
+
+    // Task 5: Append new paragraph using +=
+    document.getElementById('main').innerHTML += '<p>Appended paragraph inside main div.</p>';
+
+    // Task 6: Dynamic card layout
+    document.getElementById('cardContainer').innerHTML = `
+      <div class="card">
+        <h3>Card Title</h3>
+        <button>Learn More</button>
+      </div>
+    `;
+
+    // Task 7: Display a 2x2 table
+    document.getElementById('tableContainer').innerHTML = `
+      <table border="1">
+        <tr><td>Row 1, Col 1</td><td>Row 1, Col 2</td></tr>
+        <tr><td>Row 2, Col 1</td><td>Row 2, Col 2</td></tr>
+      </table>
+    `;
+
+    // Task 8: Clear all content
+    document.getElementById('clearMe').innerHTML = '';
+
+    // Task 9: Add a button to a section
+    document.getElementById('sectionBtn').innerHTML = '<button>Click Me!</button>';
+
+    // Task 10: Replace <span> text with styled HTML
+    document.getElementById('status').innerHTML = '<span style="color: green; font-weight: bold;">✔ Success</span>';
+  </script>
+
+</body>
+</html>
