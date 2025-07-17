@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ClassList Methods - Tasks 21–30</title>
+  <style>
+    .active { background-color: green; color: white; }
+    .error { border: 2px solid red; }
+    .dark-mode { background-color: #333; color: white; }
+    .btn { padding: 8px; }
+    .btn-primary { background: blue; color: white; }
+    .list-item { list-style-type: square; color: darkblue; }
+    .highlight { border: 2px solid orange; background-color: #ffeeba; }
+    .hidden { display: none; }
+    .modal { width: 200px; height: 100px; background: #eee; text-align: center; padding: 10px; }
+    .open { display: block; }
+    .close { display: none; }
+    .hovered { background-color: yellow; }
+  </style>
+</head>
+<body>
+
+  <!-- Task 21 -->
+  <button id="clickBtn">Click Me</button>
+
+  <!-- Task 22 -->
+  <input id="nameInput" class="error" placeholder="Enter name">
+  <button onclick="validateInput()">Validate</button>
+
+  <!-- Task 23 -->
+  <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+  <!-- Task 24 -->
+  <div id="checkClass" class="selected">Selected Element</div>
+
+  <!-- Task 25 -->
+  <button id="multiClassBtn">Styled Button</button>
+
+  <!-- Task 26 -->
+  <ul>
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Cherry</li>
+  </ul>
+
+  <!-- Task 27 -->
+  <div class="card" onclick="highlightCard(this)">Click to Highlight</div>
+
+  <!-- Task 28 -->
+  <p class="hidden">Paragraph 1</p>
+  <p class="hidden">Paragraph 2</p>
+  <button onclick="showParagraphs()">Show Paragraphs</button>
+
+  <!-- Task 29 -->
+  <div id="modal" class="modal close">This is a modal</div>
+  <button onclick="toggleModal()">Toggle Modal</button>
+
+  <!-- Task 30 -->
+  <div id="hoverBox" style="width: 150px; height: 50px; border: 1px solid #000;">Hover me</div>
+
+  <script>
+    // Task 21: Add 'active' class on button click
+    document.getElementById('clickBtn').addEventListener('click', function () {
+      this.classList.add('active');
+    });
+
+    // Task 22: Remove 'error' class on valid input
+    function validateInput() {
+      const input = document.getElementById('nameInput');
+      if (input.value.trim().length > 0) {
+        input.classList.remove('error');
+      }
+    }
+
+    // Task 23: Toggle dark mode class on body
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+
+    // Task 24: Check if element has class 'selected'
+    const checkDiv = document.getElementById('checkClass');
+    console.log('Has class selected?', checkDiv.classList.contains('selected'));
+
+    // Task 25: Add multiple classes using classList.add
+    document.getElementById('multiClassBtn').classList.add('btn', 'btn-primary');
+
+    // Task 26: Add 'list-item' class to all <li> items
+    document.querySelectorAll('li').forEach(li => {
+      li.classList.add('list-item');
+    });
+
+    // Task 27: Toggle 'highlight' class
+    function highlightCard(el) {
+      el.classList.toggle('highlight');
+    }
+
+    // Task 28: Show all paragraphs by removing 'hidden' class
+    function showParagraphs() {
+      document.querySelectorAll('p.hidden').forEach(p => {
+        p.classList.remove('hidden');
+      });
+    }
+
+    // Task 29: Toggle between 'open' and 'close' class
+    function toggleModal() {
+      const modal = document.getElementById('modal');
+      modal.classList.toggle('open');
+      modal.classList.toggle('close');
+    }
+
+    // Task 30: Add 'hovered' class on mouseover, remove on mouseout
+    const hoverBox = document.getElementById('hoverBox');
+    hoverBox.addEventListener('mouseover', () => hoverBox.classList.add('hovered'));
+    hoverBox.addEventListener('mouseout', () => hoverBox.classList.remove('hovered'));
+  </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ClassList Methods - Tasks 21–30</title>
+  <style>
+    .active { background-color: green; color: white; }
+    .error { border: 2px solid red; }
+    .dark-mode { background-color: #333; color: white; }
+    .btn { padding: 8px; }
+    .btn-primary { background: blue; color: white; }
+    .list-item { list-style-type: square; color: darkblue; }
+    .highlight { border: 2px solid orange; background-color: #ffeeba; }
+    .hidden { display: none; }
+    .modal { width: 200px; height: 100px; background: #eee; text-align: center; padding: 10px; }
+    .open { display: block; }
+    .close { display: none; }
+    .hovered { background-color: yellow; }
+  </style>
+</head>
+<body>
+
+  <!-- Task 21 -->
+  <button id="clickBtn">Click Me</button>
+
+  <!-- Task 22 -->
+  <input id="nameInput" class="error" placeholder="Enter name">
+  <button onclick="validateInput()">Validate</button>
+
+  <!-- Task 23 -->
+  <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+  <!-- Task 24 -->
+  <div id="checkClass" class="selected">Selected Element</div>
+
+  <!-- Task 25 -->
+  <button id="multiClassBtn">Styled Button</button>
+
+  <!-- Task 26 -->
+  <ul>
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Cherry</li>
+  </ul>
+
+  <!-- Task 27 -->
+  <div class="card" onclick="highlightCard(this)">Click to Highlight</div>
+
+  <!-- Task 28 -->
+  <p class="hidden">Paragraph 1</p>
+  <p class="hidden">Paragraph 2</p>
+  <button onclick="showParagraphs()">Show Paragraphs</button>
+
+  <!-- Task 29 -->
+  <div id="modal" class="modal close">This is a modal</div>
+  <button onclick="toggleModal()">Toggle Modal</button>
+
+  <!-- Task 30 -->
+  <div id="hoverBox" style="width: 150px; height: 50px; border: 1px solid #000;">Hover me</div>
+
+  <script>
+    // Task 21: Add 'active' class on button click
+    document.getElementById('clickBtn').addEventListener('click', function () {
+      this.classList.add('active');
+    });
+
+    // Task 22: Remove 'error' class on valid input
+    function validateInput() {
+      const input = document.getElementById('nameInput');
+      if (input.value.trim().length > 0) {
+        input.classList.remove('error');
+      }
+    }
+
+    // Task 23: Toggle dark mode class on body
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+
+    // Task 24: Check if element has class 'selected'
+    const checkDiv = document.getElementById('checkClass');
+    console.log('Has class selected?', checkDiv.classList.contains('selected'));
+
+    // Task 25: Add multiple classes using classList.add
+    document.getElementById('multiClassBtn').classList.add('btn', 'btn-primary');
+
+    // Task 26: Add 'list-item' class to all <li> items
+    document.querySelectorAll('li').forEach(li => {
+      li.classList.add('list-item');
+    });
+
+    // Task 27: Toggle 'highlight' class
+    function highlightCard(el) {
+      el.classList.toggle('highlight');
+    }
+
+    // Task 28: Show all paragraphs by removing 'hidden' class
+    function showParagraphs() {
+      document.querySelectorAll('p.hidden').forEach(p => {
+        p.classList.remove('hidden');
+      });
+    }
+
+    // Task 29: Toggle between 'open' and 'close' class
+    function toggleModal() {
+      const modal = document.getElementById('modal');
+      modal.classList.toggle('open');
+      modal.classList.toggle('close');
+    }
+
+    // Task 30: Add 'hovered' class on mouseover, remove on mouseout
+    const hoverBox = document.getElementById('hoverBox');
+    hoverBox.addEventListener('mouseover', () => hoverBox.classList.add('hovered'));
+    hoverBox.addEventListener('mouseout', () => hoverBox.classList.remove('hovered'));
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Changing Attributes - Tasks 1–10</title>
+</head>
+<body>
+
+  <!-- Task 1 & 3 & 6 -->
+  <a href="https://example.com">Visit Example</a>
+  <a href="https://google.com">Visit Google</a>
+
+  <!-- Task 2 & 4 & 8 -->
+  <img id="myImage" src="https://via.placeholder.com/150" alt="Placeholder Image">
+
+  <!-- Task 5 -->
+  <div id="customDiv">Custom div element</div>
+
+  <!-- Task 7 -->
+  <input type="text" required>
+
+  <!-- Task 9 -->
+  <input type="text" id="username">
+
+  <!-- Task 10 will dynamically create an element -->
+
+  <script>
+    // Task 1: Log href of an <a> tag
+    const anchor = document.querySelector('a');
+    console.log("Task 1 - href:", anchor.getAttribute('href'));
+
+    // Task 2: Log src of <img>
+    const img = document.getElementById('myImage');
+    console.log("Task 2 - src:", img.getAttribute('src'));
+
+    // Task 3: Change href using setAttribute
+    anchor.setAttribute('href', 'https://openai.com');
+
+    // Task 4: Change image src using setAttribute
+    img.setAttribute('src', 'https://th.bing.com/th/id/OIP.HgH-NjiOdFOrkmwjsZCCfAHaHl?w=168&h=180&c=7&r=0&o=7&pid=1.7&rm=3');
+
+    // Task 5: Set a custom data-id attribute
+    const customDiv = document.getElementById('customDiv');
+    customDiv.setAttribute('data-id', '12345');
+
+    // Task 6: Add target="_blank" to all anchor tags
+    document.querySelectorAll('a').forEach(link => {
+      link.setAttribute('target', '_blank');
+    });
+
+    // Task 7: Check if input is required
+    const inputField = document.querySelector('input[type="text"]');
+    console.log("Task 7 - input required:", inputField.getAttribute('required') !== null);
+
+    // Task 8: Remove alt attribute from image
+    img.removeAttribute('alt');
+
+    // Task 9: Set placeholder on input box
+    const usernameInput = document.getElementById('username');
+    usernameInput.setAttribute('placeholder', 'Enter your name');
+
+    // Task 10: Set id on dynamically created element
+    const newPara = document.createElement('p');
+    newPara.textContent = 'Browse Anything';
+    newPara.setAttribute('id', 'dynamicPara');
+    document.body.appendChild(newPara);
+  </script>
+
+</body>
+</html>

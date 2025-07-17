@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Modifying Styles - Tasks 11–20</title>
+  <style>
+    #hiddenPara {
+      display: none;
+    }
+    #box {
+      width: 100px;
+      height: 100px;
+      background-color: lightgray;
+      position: relative;
+    }
+    .card {
+      background-color: #f0f0f0;
+      width: 200px;
+      border: 1px solid #ccc;
+    }
+    #animateBox {
+      width: 100px;
+      height: 100px;
+      background: orange;
+      position: relative;
+      transition: left 0.3s;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Task 11 -->
+  <div id="colorBox">Change my background</div>
+
+  <!-- Task 12 -->
+  <h1 id="heading">Resize Me</h1>
+
+  <!-- Task 13 -->
+  <section id="mySection">I will be hidden</section>
+
+  <!-- Task 14 -->
+  <p id="hiddenPara">I was hidden but now I'm visible!</p>
+
+  <!-- Task 15 -->
+  <div id="borderBox">Add red border</div>
+
+  <!-- Task 16 -->
+  <div id="box">Toggle Me</div>
+  <button onclick="toggleBox()">Toggle Box Visibility</button>
+
+  <!-- Task 17 -->
+  <p>Paragraph 1</p>
+  <p>Paragraph 2</p>
+  <p>Paragraph 3</p>
+
+  <!-- Task 18 -->
+  <div class="card" id="myCard">Card with padding and margin</div>
+
+  <!-- Task 19 -->
+  <img id="myImage" src="https://via.placeholder.com/100" alt="Rotating">
+
+  <!-- Task 20 -->
+  <div id="animateBox"></div>
+  <button onclick="moveRight()">Move Right</button>
+
+  <script>
+    // Task 11: Change background color
+    document.getElementById('colorBox').style.backgroundColor = 'lightblue';
+
+    // Task 12: Set font size
+    document.getElementById('heading').style.fontSize = '32px';
+
+    // Task 13: Hide section
+    document.getElementById('mySection').style.display = 'none';
+
+    // Task 14: Show hidden paragraph
+    document.getElementById('hiddenPara').style.display = 'block';
+
+    // Task 15: Add red border
+    document.getElementById('borderBox').style.border = '2px solid red';
+
+    // Task 16: Toggle visibility of a box
+    function toggleBox() {
+      const box = document.getElementById('box');
+      box.style.display = box.style.display === 'none' ? 'block' : 'none';
+    }
+
+    // Task 17: Change color of all <p> to blue
+    document.querySelectorAll('p').forEach(p => {
+      p.style.color = 'blue';
+    });
+
+    // Task 18: Add padding and margin to card
+    const card = document.getElementById('myCard');
+    card.style.padding = '20px';
+    card.style.margin = '20px';
+
+    // Task 19: Rotate image
+    document.getElementById('myImage').style.transform = 'rotate(10deg)';
+
+    // Task 20: Move box right
+    function moveRight() {
+      const box = document.getElementById('animateBox');
+      box.style.left = '50px';
+    }
+  </script>
+
+</body>
+</html>
