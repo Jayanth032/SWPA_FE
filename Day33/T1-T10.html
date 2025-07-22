@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Manipulation Tasks</title>
+  <style>
+    .container, .card, .box, #toggleBox {
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid gray;
+    }
+    .large {
+      width: 200px;
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>DOM Manipulation Practice</h1>
+
+  <ul id="todoList">
+    <li>Task 1</li>
+    <li>Task 2 done</li>
+  </ul>
+
+  <div class="container"></div>
+  <div class="card"></div>
+
+  <select id="dropdown">
+    <option value="Option 1">Option 1</option>
+  </select>
+
+  <table border="1"></table>
+
+  <button class="delete-btn">Delete Card</button>
+  <button id="resetBtn">Reset Container</button>
+
+  <script>
+    // 1. Create a <p> element
+    let newP = document.createElement("p");
+    console.log(newP);
+
+    // 2. Create <div> with text and append to body
+    let div = document.createElement("div");
+    div.textContent = "Hello DOM";
+    document.body.appendChild(div);
+
+    // 3. Create <li> and append to <ul id="todoList">
+    let li = document.createElement("li");
+    li.textContent = "New Task from JS";
+    document.getElementById("todoList").appendChild(li);
+
+    // 4. Create <img> and append to .container
+    let img = document.createElement("img");
+    img.setAttribute("src", "https://th.bing.com/th?id=ORMS.9937fe5c2a28b3f5c075e5ce07e0d479&pid=Wdp&w=268&h=140&qlt=90&c=1&rs=1&dpr=1&p=0");
+    document.querySelector(".container").appendChild(img);
+
+    // 5. Add <button> with text inside <div>
+    let btn = document.createElement("button");
+    btn.textContent = "Click Me";
+    document.querySelector("div").appendChild(btn);
+
+    // 6. Append multiple <li> to a list
+    let ul = document.getElementById("todoList");
+    for (let i = 1; i <= 3; i++) {
+      let newLi = document.createElement("li");
+      newLi.textContent = "Item " + i;
+      ul.appendChild(newLi);
+    }
+
+    // 7. Create <h3> inside <section>
+    let section = document.createElement("section");
+    let h3 = document.createElement("h3");
+    h3.textContent = "I'm a subheading";
+    section.append(h3);
+    document.body.appendChild(section);
+
+    // 8. Append <p> to all elements with .card
+    document.querySelectorAll(".card").forEach(card => {
+      let para = document.createElement("p");
+      para.textContent = "Paragraph in card";
+      card.appendChild(para);
+    });
+
+    // 9. Add <option> to <select>
+    let option = document.createElement("option");
+    option.value = "new";
+    option.text = "New Option";
+    document.getElementById("dropdown").appendChild(option);
+
+    // 10. Add row to <table>
+    let tr = document.createElement("tr");
+    ["Cell 1", "Cell 2", "Cell 3"].forEach(text => {
+      let td = document.createElement("td");
+      td.textContent = text;
+      tr.appendChild(td);
+    });
+    document.querySelector("table").appendChild(tr);
+
+    // 11. Remove element by ID (create then remove)
+    let removeMe = document.createElement("div");
+    removeMe.id = "removeMe";
+    removeMe.textContent = "Remove Me";
+    document.body.appendChild(removeMe);
+    removeMe.remove();
+
+    // 12. Remove child node from parent
+    let parent = document.createElement("div");
+    parent.className = "parent";
+    let child = document.createElement("div");
+    child.className = "child";
+    child.textContent = "I'm a child";
+    parent.appendChild(child);
+    document.body.appendChild(parent);
+    parent.removeChild(child);
+
+    // 13. Button that deletes a card
+    document.querySelector(".delete-btn").addEventListener("click", () => {
+      document.querySelector(".card").remove();
+    });
+
+    // 14. Remove <li> containing "done"
+    document.querySelectorAll("li").forEach(li => {
+      if (li.textContent.includes("done")) {
+        li.remove();
+      }
+    });
+
+    // 15. Reset button clears container
+    document.getElementById("resetBtn").addEventListener("click", () => {
+      document.querySelector(".container").innerHTML = "";
+    });
+  </script>
+
+</body>
+</html>

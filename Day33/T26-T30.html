@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Events Tasks 26–30</title>
+  <style>
+    #box {
+      width: 100px;
+      height: 100px;
+      background: tomato;
+      margin: 10px;
+      transition: all 0.3s ease;
+    }
+    #image {
+      width: 200px;
+      transition: opacity 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Task 26 -->
+  <label for="dropdown">Choose an option:</label>
+  <select id="dropdown">
+    <option value="Option A">Option A</option>
+    <option value="Option B">Option B</option>
+    <option value="Option C">Option C</option>
+  </select>
+  <p id="dropdownText">Selected: </p>
+
+  <!-- Task 27 -->
+  <button id="bgChangeBtn">Change Background</button>
+
+  <!-- Task 28 -->
+  <input type="text" id="searchBox" placeholder="Type to search..." />
+  <p id="liveText">You typed: </p>
+
+  <!-- Task 29 -->
+  <img id="image" src="https://via.placeholder.com/200" alt="Hover Me" />
+
+  <!-- Task 30 -->
+  <div id="box"></div>
+
+  <script>
+    // Task 26
+    document.getElementById("dropdown").onchange = function () {
+      document.getElementById("dropdownText").textContent = "Selected: " + this.value;
+    };
+
+    // Task 27
+    document.getElementById("bgChangeBtn").onclick = function () {
+      document.body.style.backgroundColor = "#f0f8ff";
+    };
+
+    // Task 28
+    document.getElementById("searchBox").oninput = function () {
+      document.getElementById("liveText").textContent = "You typed: " + this.value;
+    };
+
+    // Task 29
+    const img = document.getElementById("image");
+    img.onmouseover = () => img.style.opacity = 0.5;
+    img.onmouseout = () => img.style.opacity = 1;
+
+    // Task 30
+    const box = document.getElementById("box");
+    box.ondblclick = function () {
+      if (box.style.width === "200px") {
+        box.style.width = "100px";
+        box.style.height = "100px";
+      } else {
+        box.style.width = "200px";
+        box.style.height = "200px";
+      }
+    };
+  </script>
+</body>
+</html>

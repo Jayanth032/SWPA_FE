@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Handling Tasks (16–25)</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+      margin: 10px;
+    }
+    .parent {
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+    .child {
+      background-color: #d0ffd0;
+      padding: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Tasks 16–25: Event Handling</h2>
+
+  <!-- Task 16 -->
+  <button id="btn16">Click Me</button>
+
+  <!-- Task 17 -->
+  <div id="box17" class="box">Hover Me</div>
+
+  <!-- Task 18 -->
+  <input type="text" id="input18" placeholder="Type something..." />
+
+  <!-- Task 19 -->
+  <button id="btn19">Say Hi</button>
+
+  <!-- Task 20 -->
+  <button id="btn20">Click Once</button>
+
+  <!-- Task 21 -->
+  <button class="multi-btn">Button 1</button>
+  <button class="multi-btn">Button 2</button>
+  <button class="multi-btn">Button 3</button>
+
+  <!-- Task 22 & 23 -->
+  <div id="outerDiv">
+    <button id="innerBtn">Click Me (Nested)</button>
+  </div>
+
+  <!-- Task 24 -->
+  <form id="form24">
+    <input type="text" placeholder="Your name" required />
+    <button type="submit">Submit</button>
+  </form>
+  <p id="msg24"></p>
+
+  <!-- Task 25 -->
+  <div class="parent" id="parent25">
+    Parent
+    <div class="child" id="child25">Child (Click Me)</div>
+  </div>
+
+  <script>
+    // Task 16
+    document.getElementById("btn16").addEventListener("click", () => {
+      console.log("Button clicked");
+    });
+
+    // Task 17
+    document.getElementById("box17").addEventListener("mouseover", () => {
+      document.getElementById("box17").style.backgroundColor = "lightgreen";
+    });
+
+    // Task 18
+    document.getElementById("input18").addEventListener("input", (e) => {
+      console.log("Typed:", e.target.value);
+    });
+
+    // Task 19
+    function sayHi() {
+      alert("Hi there!");
+    }
+    document.getElementById("btn19").addEventListener("click", sayHi);
+
+    // Task 20
+    function onceClick() {
+      alert("Clicked once!");
+      document.getElementById("btn20").removeEventListener("click", onceClick);
+    }
+    document.getElementById("btn20").addEventListener("click", onceClick);
+
+    // Task 21
+    document.querySelectorAll(".multi-btn").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        console.log("Clicked:", e.target.textContent);
+      });
+    });
+
+    // Task 22
+    document.getElementById("outerDiv").addEventListener("click", (e) => {
+      console.log("Event target:", e.target.tagName);
+    });
+
+    // Task 23
+    document.getElementById("outerDiv").addEventListener("click", (e) => {
+      console.log("currentTarget:", e.currentTarget.id);
+      console.log("target:", e.target.id);
+    });
+
+    // Task 24
+    document.getElementById("form24").addEventListener("submit", (e) => {
+      e.preventDefault();
+      document.getElementById("msg24").textContent = "Form submission prevented!";
+    });
+
+    // Task 25
+    document.getElementById("parent25").addEventListener("click", () => {
+      alert("Parent clicked");
+    });
+
+    document.getElementById("child25").addEventListener("click", (e) => {
+      e.stopPropagation();
+      alert("Child clicked without bubbling");
+    });
+  </script>
+
+</body>
+</html>
