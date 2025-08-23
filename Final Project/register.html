@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - Full Stack Bootcamp</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Bootcamp25</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="roadmap.html">Roadmap</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="instructors.html">Instructors</a></li>
+      <li><a href="register.html" class="active">Register</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="certifications.html">Certification</a></li>
+    </ul>
+  </nav>
+
+  <!-- Registration Section -->
+  <section class="register">
+    <h1>Register for Free Trial Class</h1>
+    <form id="registerForm">
+      <input type="text" id="name" placeholder="Full Name" required>
+      <input type="email" id="email" placeholder="Email Address" required>
+      <input type="tel" id="phone" placeholder="Phone Number" required>
+      <select id="course" required>
+        <option value="">Select Course</option>
+        <option value="mern">MERN Stack</option>
+        <option value="django">Django + React</option>
+        <option value="lamp">LAMP Stack</option>
+      </select>
+      <textarea id="message" placeholder="Your Goals (Optional)"></textarea>
+      <button type="submit">Submit</button>
+      <p id="formMsg"></p>
+    </form>
+  </sect
